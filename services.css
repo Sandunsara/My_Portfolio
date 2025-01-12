@@ -1,0 +1,159 @@
+/* General Styles */
+#My_Service {
+    font-family: Arial, sans-serif;
+    margin: 100;
+    padding: 20;
+    position: relative;
+    padding-top: 0%;
+}
+
+/* Section Styling */
+#My_Service {
+    padding: 40px 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+#My_Service h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Service Box Styling */
+.service-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.Service_Header{
+    text-align: center;
+    font-size: 35px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    color: rgba(118, 179, 233, 0.378);
+    padding: 5%;
+}
+
+
+.service-item {
+    background-color: #00c4cedd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(232, 219, 219, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 300px;
+    margin: 10px; 
+    transition: all 0.8s ease; 
+}
+
+/* Image Styling */
+.service-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+
+/* Heading and Paragraph Styling */
+.service-item h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+.service-item:hover{
+    color: black;
+    transition-duration: 1s;
+    transform: scale(1.1) translateY(-5px);
+    background-color: #04f4f8;
+    box-shadow: 0  0 30px #68b1fffd;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+#My_Service{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+.Service_Header{
+    text-align: center;
+    font-size: 35px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    color: rgba(118, 179, 233, 0.378);
+    padding: 5%;
+    animation: txtx 20s ease-out infinite normal;
+}
+@keyframes  txtx{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+  
+}
+
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and medium-sized devices */
+@media (max-width: 768px) {
+    .service-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-item {
+        width: 70%; /* Adjust width for smaller screens */
+        margin: 15px 0; /* Add margin between items */
+    }
+
+    #My_Service h2 {
+        font-size: 24px; /* Adjust heading font size */
+    }
+
+    .Service_Header {
+        font-size: 100px; /* Scale down header size */
+        color:rgb(118, 191, 255); ; /* Light blue shade */
+    }
+}
+
+/* For mobile phones and small devices */
+@media (max-width: 480px) {
+    .service-item {
+        padding: 15px; /* Reduce padding */
+        font-size: 14px; /* Adjust font sizes */
+    }
+
+    .service-item h3 {
+        font-size: 18px;
+    }
+
+    .service-item p {
+        font-size: 14px;
+    }
+
+    .Service_Header {
+        font-size: 60px; /* Scale down header size */
+        color:rgb(118, 179, 233); /* Light blue shade */
+        padding: 3%;
+    }
+
+    #My_Service {
+        padding: 20px 0; /* Adjust section padding */
+    }
+}

@@ -1,0 +1,236 @@
+.Contact_Header{
+    position: absolute;
+    left: 20%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    color: rgba(118, 179, 233, 0.378);
+    padding: 5%;
+    margin-top: 10%;
+}
+.contactForms{
+    margin-top: 40%;
+}
+.Contact{
+    margin: 2%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Courier New', Courier, monospace;
+}
+.penal{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.Contact form{
+    width: 500px;
+    text-align: center;
+}
+form .input_box{
+    display: flex;
+    justify-content: space-between;
+}
+.input_box .input_filed{
+    width: 48.5%;
+}
+.field .item{
+    width: 100%;
+    padding: 18px;
+    background: transparent;
+    border: 2px solid blue;
+    outline: none;
+    border-radius: 6px;
+    font-size: 16px;
+    color: aliceblue;
+    margin: 12px 0;
+}
+.field .item ::placeholder{
+    color: rgba(68, 82, 79, 0.863);
+}
+
+
+form .textarea_field .error_txt{
+    margin-top: -10px;
+}
+form .textarea_field .item{
+    resize: none;
+}
+
+form button{
+    padding: 12px 32px;
+    background: rgb(0, 247, 255);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #0ef;
+    font-size: 16px;
+    color: black;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .5s;
+}
+
+form button :hover{
+    box-shadow:none;
+
+}
+.error_txt {
+    color: red;
+    font-size: 1.2em;
+    display: none;
+    text-align: left;
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.Contact{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+}
+
+
+.Location{
+    position: absolute;
+    margin-top: -20%;
+    left: 80%;
+}
+.mapLocet{
+    position: relative;
+    margin-top: -58%;
+    display: flex;
+    position: relative;
+    justify-content:left;
+    left: 140%;
+}
+#my_location{
+    text-align:center;
+    position: relative;
+    right:118%;  /*head position adjus */
+    margin-top: -150%;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(131, 233, 118, 0.8);
+}
+iframe{
+    border-radius: 5em;
+    border: 3px solid rgb(0, 17, 255);
+    width: 400px;
+    height: 400px;
+    opacity: 0.9;
+    transition: 0.3s ease-in-out;
+}
+iframe:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.box{
+    text-align: left;
+    position: relative;
+    margin-top: 55%;
+    position: relative;
+    justify-content:left;
+    left: 150%;
+    font-size: 15px;
+}
+
+#fine_img{
+    width: 18px;
+    height: 18px;
+}
+.listpoint{
+    position: relative;
+    list-style-type: none;
+    right: 85%;
+}
+
+@media screen and (max-width: 768px) {
+    /* Adjust the Contact_Header */
+      /* Center the Contact_Header at the top */
+      .Contact_Header {
+        position: relative;
+        left: 0;
+        top: 0;
+        color: rgb(118, 191, 255);
+        margin: 0 auto;
+        text-align: center;
+        font-size: 60px; /* Adjust size for smaller screens */
+        padding: 10px;
+    }
+
+    /* Adjust the contactForms section to fit the page */
+    .contactForms {
+        margin-top: 20px;
+        width: 90%; /* Ensure it adapts to smaller screen widths */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .Contact form {
+        width: 100%; /* Adjust form width */
+        margin: 0 auto;
+    }
+
+    .input_box .input_filed {
+        width: 100%; /* Inputs stack vertically */
+    }
+
+    /* Adjust the layout for the Location section */
+    .Location {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 5%;
+        left: 100%;
+    }
+
+    .box {
+        text-align: left;
+        position: relative;
+        padding: 30%;
+        top: 40px;
+        left: -420%;
+        font-size: 14px;
+        width: 100%; /* Make it span full width */
+    }
+
+    .mapLocet {
+        position: absolute;
+        top:150px;
+        margin: 10% ;
+        left: -200%;
+        width: 180%; /* Ensure map spans the full width */
+        height: 40% auto;
+    }
+
+    iframe {
+        width: 90%;
+        height: 300px;
+        margin: 10px auto;
+    }
+
+    .listpoint {
+        position: relative;
+        margin: 0;
+        list-style-type: none;
+    }
+
+    /* Ensure animations remain consistent */
+    .Contact {
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry 10% cover 40%;
+    }
+}
+

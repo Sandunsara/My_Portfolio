@@ -1,0 +1,298 @@
+.My_Education {
+    padding: 50px 20px;
+}
+.Educate_container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.Edu_heading {
+    text-align: center;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    color: rgba(118, 179, 233, 0.378);
+    padding: 5%;
+    animation: txt 10s ease-out infinite normal;
+}
+@keyframes  txt{
+    0%{
+        transform: scale(0.9);
+    }
+    25%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+  
+}
+
+.Edu_contents {
+    position: relative;
+    justify-content: left;
+    margin-left: 20px;
+}
+
+.Edu_contents::before {
+    content: "";
+    position: absolute;
+    left: -80px;
+    top: 8px;
+    bottom: 0;
+    width: 4px;
+    background-color: #00eeff;
+}
+
+.Educate_box {
+    position: relative;
+    background: #00c4cedd;
+    border-radius: 6px;
+    border: 3px solid rgba(0, 247, 255, 0.803);
+    margin: 20px 0;
+    padding: 15px; /* Reduced padding */
+    margin-left: -40px;
+    transition: all 0.8s ease; /* Smooth transition */
+    width: 35%; /* Reduced width */
+}
+.Educate_box:hover{
+    box-shadow: 10px 13px 8px -5px #86e7ffef;
+    transition-delay: 0s;
+    transition-property: all;
+    transition-duration: 1s;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.Educate_box::before {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: -47px;
+    width: 12px; /* Reduced size */
+    height: 12px; /* Reduced size */
+    background-color: #081313;
+    border-radius: 50%;
+    border: 3px solid #111010;
+    box-shadow: 0 0 0 4px #a097ed;
+}
+
+.Educate_box h4 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #f0f3f3;
+    margin-bottom: 10px;
+}
+
+.Educate_box h3 {
+    font-size: 20px; /* Reduced size */
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.Educate_box p {
+    font-size: 18px; /* Reduced size */
+    line-height: 1.4; /* Adjusted spacing */
+    color: #666666;
+}
+
+
+/***************** Responsive Slider Styles ***************************/
+
+.Head3 {
+    text-align: justify;
+    position: relative;
+    left: 70%;
+    margin-top: -650px;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(118, 179, 233, 0.8);
+}
+
+.responsive-slider {
+    position: relative;
+    width: 50%;
+    margin: 2% auto;
+    left: 30%;
+    overflow: hidden;
+    
+}
+
+.slider-container {
+    
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.slider-item img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: height 0.5s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+.texts .p{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+button.prev,
+button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover,
+button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.slider-item.clicked .overlay {
+    height: 100%;
+}
+
+.slider-item.clicked .texts {
+    opacity: 1;
+}
+
+
+
+@keyframes gallery {
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+#EDU{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* Media Query for Slider */
+@media (max-width: 768px) {
+    .slider-item img {
+        border-radius: 5px;
+    }
+
+    button.prev,
+    button.next {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+
+/* Media Query for Responsive Layout */
+@media (max-width: 768px) {
+    /* Center the "Edu_heading" class at the top */
+    .Edu_heading {
+        text-align: center;
+        font-size: 50px; /* Adjust font size for smaller screens */
+        margin: 20px auto;
+        color: rgb(118, 191, 255); ;
+    }
+
+    /* Center the "Educate_box" section in the middle */
+    .Edu_contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    .Edu_contents::before {
+        content: "";
+        position: absolute;
+        left: -10px;
+        top: 8px;
+        bottom: 0;
+        width: 4px;
+        background-color: #00eeff;
+    }
+
+    .Educate_box {
+        width: 80%; /* Adjust width for smaller screens */
+        margin: 15px 0; /* Add spacing between boxes */
+    }
+
+    /* Center the "Head3" class in the middle */
+    .Head3 {
+        text-align: center;
+        font-size: 28px; /* Adjust font size for smaller screens */
+        margin: 30px auto;
+        left: 0; /* Reset the positioning */
+        position: static; /* Let it flow naturally */
+    }
+
+    /* Adjust the "responsive-slider" section at the bottom */
+    .responsive-slider {
+        width: 90%; /* Adjust width for smaller screens */
+        margin: 20px auto; /* Center the slider */
+        left: 0; /* Reset the positioning */
+    }
+
+    /* Ensure animations are consistent */
+    .Edu_heading,
+    .Educate_box:hover,
+    .slider-item.clicked .overlay,
+    .slider-item.clicked .texts {
+        animation: txt 10s ease-out infinite normal;
+    }
+}

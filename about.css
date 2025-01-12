@@ -1,0 +1,235 @@
+.My_About {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 20px;
+    flex-direction: row-reverse; /* Swaps sides */
+}
+.About_Me{
+    padding-top: 0%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.About_Header{
+    text-align: center;
+    font-size: 35px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 100px;
+    color: rgba(118, 179, 233, 0.378);
+    padding: 5%;
+    animation: txt 10s ease-out infinite normal;
+    
+    
+}
+@keyframes  txt{
+    0%{
+        transform: scale(0.9);
+    }
+    25%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(0.9);
+    }
+  
+}
+
+#My_Name{
+    font-size: 25px;
+}
+.About_Text {
+    flex: 1;
+    max-width: 60%;
+    text-align: left;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify;
+}
+.About_img {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    max-width: 35%;
+    flex-shrink: 0;
+    padding:5%;
+}
+
+.About_img img {
+    width: 400px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border: 3px solid rgba(239, 239, 247, 0.803);
+}
+/* Add smooth transition to the header */
+.About_Header {
+    transition: transform 1s ease, opacity 1s ease; /* Smooth transition for animations */
+    transform: translateX(-100%); /* Initial position off the screen */
+    opacity: 0; /* Initially hidden */
+}
+
+/* When the section is in view, apply animation */
+.About_Me.show-animate .About_Header {
+    transform: translateX(0); /* Move into the visible area */
+    opacity: 1; /* Fully visible */
+}
+
+
+/* Flip card styles */
+.flip-card {
+    perspective: 1000px;
+    display: inline-block; /* Ensures alignment remains */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 400px; /* Matches the About_img dimensions */
+    height: 500px;
+    text-align: center;
+    transition: transform 0.6s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: transparent;
+}
+
+.flip-card-back {
+    background-color: #1a1a1aac; /* Customize as needed */
+    color: white;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 50%; /* Matches the front image style */
+    padding: 20px;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Add border and shadow consistency for the back */
+.flip-card-back {
+    border: 3px solid rgba(239, 239, 247, 0.803);
+    box-shadow: 0 4px 20px rgba(109, 231, 255, 0.915);
+}
+/*
+@keyframes appear{
+    from{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+.About_Me{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 10% cover 40%;
+}*/
+
+.About_Me{
+    animation: cssscrollreveal  ease-in-out both;
+    animation-timeline: view();
+    animation-range: entry 10% cover 50%;
+}
+@keyframes cssscrollreveal{
+    from{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.downloadCV{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: black;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+    letter-spacing: 0.5rem;
+    font-weight: 600;
+    border: 2px solid #04f4f8;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+.downloadCV:hover{
+    transform: scale3d(1.03);
+    background-color: #001a3985;
+    color: black;
+    box-shadow: 0 0 20px #04f4f8;
+}
+
+@media (max-width: 768px) {
+    .My_About {
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center-align all elements */
+        justify-content: flex-start; /* Align content towards the top */
+        gap: 20px; /* Add space between elements */
+        padding: 20px;
+    }
+
+    .About_Header {
+        text-align: center; /* Center the text */
+        font-size: 40px; /* Adjust font size for smaller screens */
+        color:rgb(118, 179, 233); /* Light blue shade */
+        padding: 10px;
+        margin-top: 20px; /* Add spacing at the top */
+        margin-bottom: 20px; /* Add spacing below the header */
+    }
+
+    .About_img {
+        display: flex;
+        justify-content: center; /* Center the image */
+        align-items: center;
+        width: 100%; /* Make the container span full width */
+        max-width: 300px; /* Limit the width of the image */
+    }
+
+    .About_img img {
+        width: 300px; /* Adjust width to maintain circular shape */
+        height: 500px; /* Adjust height to match width */
+        border-radius: 50%; /* Ensure a circular shape */
+        object-fit: cover;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow for emphasis */
+        border: 3px solid rgba(239, 239, 247, 0.803); /* Consistent border */
+        margin-bottom: 20px; /* Add spacing below the image */
+    }
+
+    .About_Text {
+        text-align: center; /* Center-align the text */
+        max-width: 90%; /* Restrict the width for readability */
+        margin: 10px auto; /* Center the block */
+        padding: 10px;
+    }
+    
+
+    .downloadCV {
+        display: inline-block;
+        margin: 20px auto; /* Center the button */
+        text-align: center;
+    }
+}

@@ -1,0 +1,54 @@
+.Location{
+    position: absolute;
+    margin-top: -20%;
+    left: 100%;
+}
+.mapLocet{
+    position: relative;
+    margin-top: -58%;
+    display: flex;
+    position: relative;
+    justify-content:left;
+    left: 140%;
+}
+#my_location{
+    text-align:center;
+    position: relative;
+    right:118%;  /*head position adjus */
+    margin-top: -150%;
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgba(131, 233, 118, 0.8);
+}
+iframe{
+    border-radius: 5em;
+    border: 3px solid rgb(0, 17, 255);
+    width: 400px;
+    height: 400px;
+    opacity: 0.9;
+    transition: 0.3s ease-in-out;
+}
+iframe:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.box{
+    text-align: left;
+    position: relative;
+    margin-top: 55%;
+    position: relative;
+    justify-content:left;
+    left: 150%;
+    font-size: 15px;
+}
+
+#fine_img{
+    width: 18px;
+    height: 18px;
+}
+.listpoint{
+    position: relative;
+    list-style-type: none;
+    right: 85%;
+}
