@@ -103,7 +103,7 @@ form button :hover{
 .Location{
     position: absolute;
     margin-top: -20%;
-    left: 100%;
+    left: 80%;
 }
 .mapLocet{
     position: relative;
@@ -192,7 +192,7 @@ iframe:hover{
         flex-direction: column;
         align-items: flex-start;
         margin-top: 5%;
-        left: 80%;
+        left: 100%;
     }
 
     .box {
