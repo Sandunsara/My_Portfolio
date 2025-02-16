@@ -195,5 +195,11 @@ function toggleMenu() {
       }
     });
   });
+
+ /*********** Verify Certification Code**************/
+
+  function myFunction() {
+    alert("You copied text!");
+  }
   
   
