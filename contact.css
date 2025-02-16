@@ -234,3 +234,8 @@ iframe:hover{
     }
 }
 
+ /*********** Verify Certification Code**************/
+
+  function myFunction() {
+    alert("You copied text!");
+  }
