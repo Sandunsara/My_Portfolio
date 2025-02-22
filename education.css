@@ -290,9 +290,7 @@ button.next:hover {
 
     /* Ensure animations are consistent */
     .Edu_heading,
-    .Educate_box:hover,
-    .slider-item.clicked .overlay,
-    .slider-item.clicked .texts {
+    .Educate_box:hover {
         animation: txt 10s ease-out infinite normal;
     }
 }
