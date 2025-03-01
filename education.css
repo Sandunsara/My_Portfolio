@@ -132,6 +132,11 @@
     position: relative;
 }
 
+.slider-item p{
+    text-align: center;
+
+}
+
 .slider-item img {
     width: 100%;
     border-radius: 10px;
