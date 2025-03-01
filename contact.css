@@ -200,7 +200,7 @@ iframe:hover{
         position: relative;
         padding: 30%;
         top: 40px;
-        left: -420%;
+        left: -350%;
         font-size: 14px;
         width: 100%; /* Make it span full width */
     }
