@@ -317,10 +317,10 @@
 @media (max-width: 768px) {
 
     /* Adjust Skills_Header */
-    /*.Skills_Header span {
+    .Skills_Header span {
         position: absolute;
         margin: 0 auto;
-        top: 1%; /* Center vertically */
+        /*top: 1%; /* Center vertically */
         left: 20%; /* Center horizontally */
         writing-mode: horizontal-tb;
         text-align: center;
